@@ -1,0 +1,11 @@
+https methods
+get    read data
+post   insert data
+put    update data
+delete delete data
+
+
+request response
+-> request message
+-> headers
+-> body
