@@ -13,6 +13,8 @@ app.get('/api/products', (req, res) => {
 
   res.json(newProducts)
 })
+//route parameters, when you wanna take user input for a parameter, seperate out its value and
+// based on that give result
 app.get('/api/products/:productID', (req, res) => {
   // console.log(req)
   // console.log(req.params)
@@ -28,11 +30,15 @@ app.get('/api/products/:productID', (req, res) => {
   return res.json(singleProduct)
 })
 
+
 app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
   console.log(req.params)
   res.send('hello world')
 })
 
+//Query Strings
+// on the url, look for the required data like
+// www.something.com/api/v1/query?search=abc&limit=10
 app.get('/api/v1/query', (req, res) => {
   // console.log(req.query)
   const { search, limit } = req.query
